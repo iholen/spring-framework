@@ -1,21 +1,16 @@
-package me.heoller.config;
-
+import me.heoller.config.StartConfig;
 import me.heoller.service.AnimalService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @author huliang
- * @date 2020/9/13 16:58
+ * @date 2020/9/13 17:28
  */
-@ComponentScan("me.heoller")
-@Configuration
-public class BeanConfig {
+public class ApplicationStartCode {
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
-				BeanConfig.class);
+				StartConfig.class);
 
 		AnimalService bean = applicationContext.getBean(AnimalService.class);
 		bean.sayHi();

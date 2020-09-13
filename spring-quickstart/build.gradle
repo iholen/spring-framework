@@ -2,10 +2,6 @@ plugins {
     id 'java'
 }
 
-exec {
-  commandLine 'git', 'describe', '--tags'
-}
-
 group 'org.springframework'
 version '5.2.8.RELEASE'
 
